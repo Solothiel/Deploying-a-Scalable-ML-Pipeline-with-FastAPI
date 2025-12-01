@@ -12,16 +12,16 @@ from ml.model import (
     save_model,
     train_model,
 )
-# TODO: load the cencus.csv data
+# TODO: load the census.csv dataclea
 project_path = os.getcwd()
 data_path = os.path.join(project_path, "data", "census.csv")
 print(data_path)
-data = pd.read_csv("census.csv")  # your code here
+data = pd.read_csv("data/census.csv")  # your code here
 
 # TODO: split the provided data to have a train dataset and a test dataset
 
 # Optional enhancement, use K-fold cross validation instead of a train-test split.
-train, test = train_test_split(X,y, test_size=0.20, random_state=42) # Your code here
+train, test = train_test_split(data, test_size=0.20, random_state=42) # Your code here
 
 # DO NOT MODIFY
 cat_features = [
@@ -87,7 +87,7 @@ for col in cat_features:
         p, r, fb = performance_on_categorical_slice(
             test,
             col,
-            slice_value,
+            slicevalue,
             cat_features,
             label="salary",
             encoder=encoder,
