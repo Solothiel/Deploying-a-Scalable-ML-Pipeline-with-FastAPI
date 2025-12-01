@@ -85,6 +85,7 @@ for col in cat_features:
     for slicevalue in sorted(test[col].unique()):
         count = test[test[col] == slicevalue].shape[0]
         p, r, fb = performance_on_categorical_slice(
+            yr
             # your code here
             # use test, col and slicevalue as part of the input
         )
