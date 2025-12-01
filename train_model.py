@@ -72,7 +72,7 @@ model = load_model(
 
 # TODO: use the inference function to run the model inferences on the test dataset.
 # your code here
-preds = inference(model, X_test
+preds = inference(model, X_test)
 
 # Calculate and print the metrics
 p, r, fb = compute_model_metrics(y_test, preds)
@@ -85,7 +85,14 @@ for col in cat_features:
     for slicevalue in sorted(test[col].unique()):
         count = test[test[col] == slicevalue].shape[0]
         p, r, fb = performance_on_categorical_slice(
-            yr
+            test,
+            col,
+            slice_value,
+            cat_features,
+            label="salary",
+            encoder=encoder,
+            lb=lb,
+            model=model
             # your code here
             # use test, col and slicevalue as part of the input
         )
