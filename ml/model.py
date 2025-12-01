@@ -67,8 +67,8 @@ def inference(model, X):
         Predictions from the model.
     """
     # TODO: implement the function
-    with open (path, 'wb') as fp:
-        pickle.dump(model, f)
+    preds = model.predict(X)
+    return preds
     
     
 
@@ -83,7 +83,8 @@ def save_model(model, path):
         Path to save pickle file.
     """
     # TODO: implement the function
-    pass
+    with open (path, 'wb') as fp:
+        pickle.dump(model, fp)
     
     
 
