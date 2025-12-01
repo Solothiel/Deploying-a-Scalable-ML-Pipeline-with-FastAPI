@@ -27,12 +27,12 @@ class Data(BaseModel):
     native_country: str = Field(..., example="United-States", alias="native-country")
 
 # path to the saved encoder
-project_path = os.getcwd
-path = os.path.join(project_path, "model", "encoder.pkl") 
+
+path = os.path.join("model", "encoder.pkl") 
 encoder = load_model(path)
 
 # path to the saved model
-path = os.path.join(project_path, "model", "model.pkl") 
+path = os.path.join("model", "model.pkl") 
 model = load_model(path)
 
 # TODO: create a RESTful API using FastAPI
