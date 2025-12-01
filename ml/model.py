@@ -5,6 +5,7 @@ from ml.data import process_data
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.preprocessing import OneHotEncoder
 
 # Optional: implement hyperparameter tuning.
 def train_model(X_train, y_train):
@@ -67,6 +68,7 @@ def inference(model, X):
     """
     # TODO: implement the function
     pass
+    
 
 def save_model(model, path):
     """ Serializes model to a file.
@@ -80,11 +82,14 @@ def save_model(model, path):
     """
     # TODO: implement the function
     pass
+    
+    
 
 def load_model(path):
     """ Loads pickle file from `path` and returns it."""
     # TODO: implement the function
     pass
+    
 
 
 def performance_on_categorical_slice(
