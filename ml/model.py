@@ -135,10 +135,10 @@ def performance_on_categorical_slice(
 
     """
     # TODO: implement the function
-
+    #filters the imput data to the slice for evaluation.
     sliced_data = data[data[column_name] == slice_value]
 
-    
+    #Process the sliced data (required training=false)
     X_slice, y_slice, _, _ = process_data(
         sliced_data,
         categorical_features=categorical_features,
@@ -150,6 +150,8 @@ def performance_on_categorical_slice(
         # for input data, use data in column given as "column_name", with the slice_value 
         # use training = False
     )
+    #get predictions forr the slice
     preds = inference(model, X_slice) # your code here to get prediction on X_slice using the inference function
+    #compute metrics for the slice.
     precision, recall, fbeta = compute_model_metrics(y_slice, preds)
     return precision, recall, fbeta

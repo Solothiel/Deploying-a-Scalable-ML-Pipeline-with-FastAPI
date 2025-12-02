@@ -1,6 +1,10 @@
 import numpy as np
 from sklearn.preprocessing import LabelBinarizer, OneHotEncoder
+import pandas as pd
+import os
 
+#added pandas, os and data
+data = pd.read_csv('data/census.csv')
 
 def process_data(
     X, categorical_features=[], label=None, training=True, encoder=None, lb=None
