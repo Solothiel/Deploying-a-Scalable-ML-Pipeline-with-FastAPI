@@ -6,7 +6,7 @@ import requests
 r = requests.get("http://127.0.0.1:8000")
 
 # TODO: print the status code
-print("Status Code:". r.status_code)
+print("Status Code:", r.status_code)
 # TODO: print the welcome message
 if r.status_code == 200:
     print("Response:", r.json())
