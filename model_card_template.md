@@ -4,7 +4,7 @@ For additional information see the Model Card paper: https://arxiv.org/pdf/1810.
 
 ## Model Details
 **Name** Census Income
-**Model Type** ~Random Forest~ Selected this as it has a high accurracy, and provides a reduction in overfitting,  This is a supervised model with binary classification.
+**Model Type** `Random Forest` Selected this as it has a high accurracy, and provides a reduction in overfitting,  This is a supervised model with binary classification.
 **Framework** scikit-learn was used for model training and OneHotEncoder
 **Tasks** This will try to predict wether a person income is more than 50,000 a year.
 
@@ -13,7 +13,7 @@ For additional information see the Model Card paper: https://arxiv.org/pdf/1810.
 **Purpose** Estimate income category for individuals
 
 ## Training Data
-**Data** ~census.csv~
+**Data** `census.csv`
 **label** salary 
 **Train/Test split** 80/20
 **Random State** 42
