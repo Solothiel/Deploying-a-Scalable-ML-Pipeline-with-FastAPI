@@ -14,7 +14,7 @@ For additional information see the Model Card paper: https://arxiv.org/pdf/1810.
 
 ## Training Data
 **Data** `census.csv`
-**label** salary 
+**label** 'salary' 
 **Train/Test split** 80/20
 **Random State** 42
 **Features Used** *"workclass", "education, "marital-status","occupation","relationship","race","sex","native-country"*
